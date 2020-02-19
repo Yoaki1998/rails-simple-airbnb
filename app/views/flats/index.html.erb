@@ -1,0 +1,15 @@
+<h1>Flats</h1>
+
+<tbody>
+  <% @flats.each do |x| %>
+  <div class="Card">
+    <ul>
+      <li><strong><%= x.name %>-<%= link_to 'show', flat_path(x) %></strong></li>
+      <li><%= x.address %></li>
+      <li><%= x.description %></li>
+    </ul>
+  </div>
+  <% end %>
+</tbody>
+
+<%= link_to 'new', new_flat_path %>

@@ -1,0 +1,11 @@
+<div class="Card">
+  <ul>
+    <li><strong><%= @flat.name %></strong></li>
+    <li> - <%= @flat.address %></li>
+    <li> - <%= @flat.description %></li>
+  </ul>
+</div>
+
+<%= link_to 'edit', edit_flat_path(@flat) %>
+<%= link_to 'delete', flat_path(@flat),method: :delete,data: { confirm: 'Are you sure?' } %>
+<%= link_to 'back', flats_path %>
